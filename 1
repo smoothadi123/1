@@ -1,0 +1,25 @@
+#include<iostream.h> 
+#include<conio.h> 
+void towers(int, char, 
+char,char);int main () 
+{ 
+clrscr(); 
+intnum; 
+cout<<”Enter the number of disks:”; 
+cin>>num; 
+cout<<”\n The sequence of moves involved in tower of Hanoi is:”; 
+towers(num,’A’,’C’,’B’); 
+getch(); 
+return 0; 
+} 
+void towers(intnum,charfrompeg,chartopeg,charauxpeg) 
+{ 
+if(num==1) 
+{ 
+cout<<”\n Move disk1 frompeg”<<frompeg<<”topeg”<<topeg; 
+return; 
+} 
+towers (num-1,frompeg,auxpeg,topeg); 
+cout<<”\n Move disk”<<num<<”frompeg”<<frompeg<<”topeg”<<topeg; 
+towers (num-1, auxpeg,topeg, frompeg); 
+}
