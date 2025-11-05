@@ -1,0 +1,80 @@
+flask_mysql.py
+
+from flask import Flask, request, render_template
+
+from flaskext.mysql import MySQL
+
+MySQL() myaqi
+
+app Flask (name)
+
+app.config['MYSQL DATABASE USER) root
+
+app.config[MYSQL DATABASE PASSWORD] 'root' app.config['MYSQL DATABASE DB'] "test"
+
+app.config['HYSQL DATABASE HOST] 'localhost"
+
+mysql.init_app(app)
+
+@app.route('/')
+
+return render_template('from ex.html)
+
+def my form():
+
+@app.route("/",methods=['POST')
+
+def Authenticate():
+
+username request.form['u']
+
+password request.form
+
+cursor mysql.connect().cursor()
+
+cursor.execute ("SELECT * from User where username="+ username +"and password="+ password+"'")
+data cursor.fetchone ()
+
+if data is llone:
+
+return "Username or Password is vring
+
+else:
+
+return "Logged in successfully"
+
+if__name__=="__main__"":
+
+app.run() T
+
+form.htinl
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Title</title>
+
+<head>
+
+<body>
+
+<form method="POST">
+
+<p>Login</p><br>
+
+<input name="u">
+
+<input name="p">
+
+<input type="submit">
+
+</form>
+
+</body>
+
+</html>
